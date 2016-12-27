@@ -292,7 +292,7 @@ WHERE dir0 = MAXDIR( dfs, '/var/logs' )
 One of the challenges in using Drill is that while Drill in many ways acts like a relational database, there are key areas in which it does not, and understanding these is key to getting the most out of Drill.  This section will cover the basic fundamentals of analyzing delimited data with Drill. 
 
 ###Understanding Drill Data Types
-While Drill can infer the structure of data from the files, when you are querying delimited data, Drill cannot implicitly interpret the data type of each field and since there are no predefined schemata, **you will have to explicitly cast data into a particular data type in your queries in order to use it for other functions**.  As you will see in later examples The examples in this section will use a sample data file `baltimore_salaries_2015.csvh` which is included with drill in the classpath.  For instance, the query below fails because Drill cannot infer that the Salary field is a numeric field.
+While Drill can infer the structure of data from the files, when you are querying delimited data, Drill cannot implicitly interpret the data type of each field and since there are no predefined schemata, **you will have to explicitly cast data into a particular data type in your queries in order to use it for other functions**.  As you will see in later examples The examples in this section will use a sample data file `baltimore_salaries_2015.csvh` which is included in the github repository.  For instance, the query below fails because Drill cannot infer that the Salary field is a numeric field.
 
 	SELECT GrossPay, 
 	FROM dfs.drillworkshop.`csv/baltimore_salaries_2015.csvh`
